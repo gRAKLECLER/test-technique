@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>hello page2</h1>
+    <h1 class="title">hello page2</h1>
   </div>
 </template>
 
@@ -10,6 +10,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.title{
+    font-size: 48px;
+}
 </style>

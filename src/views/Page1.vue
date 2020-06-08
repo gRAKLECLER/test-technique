@@ -49,22 +49,30 @@ export default {
 <style lang="scss">
 .fact{
   display: flex;
+  margin-top: 5vh;
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  &__content{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+
+  &__title{
+    font-size: 48px;
   }
+
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+  }
+
   &__date{
     list-style: none;
     padding: 20px;
     margin-bottom: 10px;
-    width: 50%;
+    width: 30%;
     height: auto;
     box-shadow: 9px 9px 5px -7px rgba(0,0,0,0.75);
-    transition: scale 0.3s ease;
+    transition: transform 0.3s ease;
 
     &:hover{
       transform: scale(1.05);

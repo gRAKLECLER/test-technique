@@ -1,6 +1,6 @@
 <template>
   <form class="baseInput" @submit.prevent="">
-      <label for="input">Enter your dates</label>
+      <label for="input">Enter your Events dates</label>
       <input class="baseInput__input" type="text" name="input" id="input" v-model="theDate">
       <button class="baseInput__button" @click='getDate'>Show dates</button>
   </form>
@@ -39,7 +39,7 @@ export default {
     border: none;
     border-radius: 5px;
     background-color: #3ddc97;
-    color: white;
+    color: #f4fffa;
   }
 }
 </style>
