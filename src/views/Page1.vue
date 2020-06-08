@@ -1,9 +1,9 @@
 <template>
-  <div class="home">
-    <h1 class="home__title">History Facts</h1>
+  <div class="fact">
+    <h1 class="fact__title">History Facts</h1>
     <BaseInput @addDate="createEvent"/>
-    <ul>
-      <li class="home__date" v-for="(fact, i) in facts.Events" :key="i">
+    <ul class="fact__content">
+      <li class="fact__date" v-for="(fact, i) in facts.Events" :key="i">
         <p>{{ fact.text }}</p>
       </li>
     </ul>
@@ -14,7 +14,7 @@
 import BaseInput from '@/components/BaseInput.vue'
 
 export default {
-  name: 'Home',
+  name: 'fact',
   components: {
     BaseInput,
   },
@@ -47,11 +47,29 @@ export default {
 </script>
 
 <style lang="scss">
-.home{
+.fact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  &__content{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
   &__date{
     list-style: none;
-    border-radius: 5px;
-    box-shadow: 10px 5px 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+    width: 50%;
+    height: auto;
+    box-shadow: 9px 9px 5px -7px rgba(0,0,0,0.75);
+    transition: scale 0.3s ease;
+
+    &:hover{
+      transform: scale(1.05);
+      box-shadow: 10px 10px 18px -11px rgba(0,0,0,0.75);
+    }
   }
 }
 </style>
